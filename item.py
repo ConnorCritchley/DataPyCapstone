@@ -9,6 +9,7 @@ class Item:  # Baseline parent Item class
 
 class Drink(Item):  # Item subclass for drinks
     def __init__(self, name, price, size):  # Takes in name and price, and size
+        self.category = "Drink"
         self.size = size  # assigns drink-specific size variable
         Item.__init__(self, name, price)  # calls parent constructor for other details
         if size == 'L':  # If they ordered a large, increase price by .30
@@ -18,6 +19,7 @@ class Drink(Item):  # Item subclass for drinks
 class Food(Item):  # Item subclass for Food
     def __init__(self, name, price, toasted):  # Takes in name and price, and if toasted
         self.toasted = toasted  # Assigns food-specific
+        self.category = 'Food'
         Item.__init__(self, name, price)
 
 if __name__ == '__main__':
