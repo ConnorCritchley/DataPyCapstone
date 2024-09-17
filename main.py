@@ -75,7 +75,7 @@ while running:
             size = ''
             valid = False
             while not valid:
-                size = input("What's the drink's size? Regular ('R') or Large ('L')?\n").upper()
+                size = input("What's the drink's size? Regular ('R') or Large ('L')? Large is +$0.30\n").upper()
                 if size == 'R' or 'L':
                     valid = True
             cart.append(I.Drink(menu_keys[choice], menu[menu_keys[choice]], size))
