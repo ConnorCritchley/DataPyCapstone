@@ -123,7 +123,6 @@ while running:
         else:
             print(f"Change is ${abs(change):.2f}")
 
-
     # Check for exit of main run loop
     if input('\nOrder again? y/n\n').upper() == 'N':
         running = False
