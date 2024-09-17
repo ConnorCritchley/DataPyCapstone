@@ -27,7 +27,7 @@ def add_item():
         except ValueError:
             pass
     menu[name] = price
-    menu_keys.update({len(menu)-1:name})
+    menu_keys[len(menu)-1] = name
     print_menu()
 
 
