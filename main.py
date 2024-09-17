@@ -80,7 +80,7 @@ while running:
                     valid = True
             cart.append(I.Drink(menu_keys[choice], menu[menu_keys[choice]], size))
         # Check if in the food section
-        elif choice in range(10, 14):
+        elif choice in range(9, 14):
             toasted = True if input("Want it toasted? y/n\n").upper() == 'Y' else False
             cart.append(I.Food(menu_keys[choice], menu[menu_keys[choice]], toasted))
         # check for custom item added to menu, anything higher than our preset ones
