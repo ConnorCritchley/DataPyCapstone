@@ -97,7 +97,6 @@ while running:
     for item in cart:
         subtotal += item.price
     grand_total = (subtotal * tax) + subtotal
-    shop_again = True
     print(f"Subtotal: ${subtotal:.2f}\nTax: ${subtotal * tax:.2f}\nGrand Total: ${grand_total:.2f}")
     payment_type = input("How would you like to pay? (Cash/Credit/Check)\n").upper()
     cash = 0
