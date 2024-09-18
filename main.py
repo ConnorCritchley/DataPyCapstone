@@ -28,7 +28,7 @@ def add_item():
         except ValueError:
             pass
     menu[name] = price
-    menu_keys.update({len(menu)-1:name})
+    menu_keys[len(menu)-1] = name
     print_menu()
 
 
@@ -92,7 +92,7 @@ while running:
                     valid = True
             cart.append(I.Drink(menu_keys[choice], menu[menu_keys[choice]], size, quantity))
         # Check if in the food section
-        elif choice in range(10, 14):
+        elif choice in range(9, 14):
             toasted = True if input("Want it toasted? y/n\n").upper() == 'Y' else False
             cart.append(I.Food(menu_keys[choice], menu[menu_keys[choice]], toasted, quantity))
         # check for custom item added to menu, anything higher than our preset ones
@@ -137,7 +137,6 @@ while running:
             pass
         else:
             print(f"Change is ${abs(change):.2f}")
-
 
     # Check for exit of main run loop
     if input('\nOrder again? y/n\n').upper() == 'N':
